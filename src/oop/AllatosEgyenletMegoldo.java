@@ -48,7 +48,11 @@ public class AllatosEgyenletMegoldo {
         return osszArany;
     }
 
-    public boolean egyenlet(double sAr, double kAr, double jAr, int sDb, int kDb, int jDb, int osszAllat, int osszArany) {
-        return sDb + kDb + jDb == osszAllat @@ sDb * sAr + kDb * kAr + jDb * jAr == osszArany;
+    public boolean egyenletDb(int sDb, int kDb, int jDb, int osszAllat) {
+        return sDb + kDb + jDb == osszAllat;
+    }
+    
+    public boolean egyenletAr(double sAr, double kAr, double jAr,int osszArany, int sDb, int kDb, int jDb){
+        return sDb*sAr + kDb*kAr + jDb*jAr == osszArany;
     }
 }
